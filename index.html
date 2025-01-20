@@ -413,10 +413,12 @@
         <h2>Kontaktujte nás</h2>
         <p>Pro více informací nebo dotazy nás neváhejte kontaktovat. Jsme zde pro vás!</p>
         <p><strong>Telefon:</strong> +420 773 228 592</p>
-        <form action="/submit_form.php" method="POST" class="contact-form">
-<input type="email" name="email" placeholder="Váš e-mail" autocomplete="email" required>
-<textarea name="message" placeholder="Vaše zpráva" autocomplete="on" required></textarea>
-<button type="submit" class="btn">poslat</button>
+ <form action="https://formsubmit.co/ВАШ_EMAIL" method="POST">
+ <input type="hidden" name="_captcha" value="true">
+  <input type="text" name="name" placeholder="Vaše jméno" required>
+  <input type="email" name="email" placeholder="Váš email" required>
+  <textarea name="message" placeholder="Vaše zpráva" required></textarea>
+  <button type="submit">Odeslat</button>
 </form>
     </section>
 
