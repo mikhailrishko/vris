@@ -451,6 +451,48 @@
     </footer>
 
     <script>
+    // Функция для отслеживания отправки формы
+    function trackFormSubmission() {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16827654390/FSNCCI62qIwaEPbBhtg-',  // Ваш идентификатор отслеживания для конверсии
+            'value': 1.0,
+            'currency': 'CZK',
+            'event_callback': function() {
+                console.log("Форма отправлена, конверсия зарегистрирована");
+            }
+        });
+    }
+
+    // Функция для отслеживания звонков
+    function trackCall() {
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16827654390/FSNCCI62qIwaEPbBhtg-',  // Ваш идентификатор отслеживания для конверсии
+            'value': 1.0,
+            'currency': 'CZK',
+            'event_callback': function() {
+                console.log("Звонок совершен, конверсия зарегистрирована");
+            }
+        });
+    }
+
+    // Функция для Google Tag Manager (если используете GTM)
+    function gtag_report_conversion(url) {
+        var callback = function () {
+            if (typeof(url) != 'undefined') {
+                window.location = url;
+            }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16827654390/FSNCCI62qIwaEPbBhtg-',  // Ваш идентификатор отслеживания для конверсии
+            'value': 1.0,
+            'currency': 'CZK',
+            'event_callback': callback
+        });
+        return false;
+    }
+</script>
+    
+    <script>
         function toggleMenu() {
             document.getElementById('menu').classList.toggle('show-menu');
         }
