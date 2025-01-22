@@ -455,30 +455,7 @@
    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <!-- End Google Tag Manager (noscript) -->
   
-</script>
-
-    // Функция для отслеживания отправки формы
-    function trackFormSubmission() {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-16827654390/FSNCCI62qIwaEPbBhtg-',  // Ваш идентификатор отслеживания для конверсии
-            'value': 1.0,
-            'currency': 'CZK',
-            'event_callback': function() {
-                console.log("Форма отправлена, конверсия зарегистрирована");
-            }
-        });
-    }
-
-    // Функция для отслеживания звонков
-    function trackCall() {
-        gtag('event', 'conversion', {
-            'send_to': 'AW-16827654390/FSNCCI62qIwaEPbBhtg-',  // Ваш идентификатор отслеживания для конверсии
-            'value': 1.0,
-            'currency': 'CZK',
-            'event_callback': function() {
-                console.log("Звонок совершен, конверсия зарегистрирована");
-            }
-        });
+       });
     }
 
     // Функция для Google Tag Manager (если используете GTM)
@@ -487,15 +464,7 @@
             if (typeof(url) != 'undefined') {
                 window.location = url;
             }
-        };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-16827654390/FSNCCI62qIwaEPbBhtg-',  // Ваш идентификатор отслеживания для конверсии
-            'value': 1.0,
-            'currency': 'CZK',
-            'event_callback': callback
-        });
-        return false;
-    }
+       
 </script>
     
     <script>
